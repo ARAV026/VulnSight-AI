@@ -1,9 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { useAuth } from "../auth.jsx";
 
 export function AppLayout() {
-  const { user, signOut } = useAuth();
-
   return (
     <div className="app-shell app-layout">
       <aside className="sidebar">
@@ -16,7 +13,7 @@ export function AppLayout() {
           <p className="eyebrow">VulnSight AI</p>
           <h1 className="sidebar-title">Security Ops Console</h1>
           <p className="sidebar-copy">
-            Stripe-like structure, Datadog-style observability, and a dark cyber presentation layer for scans, risk, and reports.
+            Intelligent vulnerability detection and real-time threat analysis dashboard.
           </p>
         </div>
 
@@ -38,14 +35,6 @@ export function AppLayout() {
             <small>Exports</small>
           </NavLink>
         </nav>
-
-        <div className="sidebar-user">
-          <div>
-            <strong>{user?.name}</strong>
-            <span>{user?.email}</span>
-          </div>
-          <button type="button" onClick={signOut}>Sign Out</button>
-        </div>
       </aside>
 
       <div className="content-area">

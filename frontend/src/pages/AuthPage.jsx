@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { loginUser, registerUser } from "../api";
+import { login, register } from "../api";
 import { useAuth } from "../auth";
 
 export default function AuthPage({ mode }) {
@@ -16,7 +16,7 @@ export default function AuthPage({ mode }) {
     setError("");
     setLoading(true);
     try {
-      const response = isRegister ? await registerUser(form) : await loginUser(form);
+      const response = isRegister ? await register(form) : await login(form);
       login(response.access_token, response.user);
       navigate("/dashboard");
     } catch (requestError) {

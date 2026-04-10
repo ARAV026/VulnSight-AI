@@ -18,8 +18,8 @@ export function HomePage() {
       <header className="hero slim-hero">
         <div>
           <p className="eyebrow">Overview</p>
-          <h1>Operational view of queued and completed scans</h1>
-          <p className="hero-copy">Track exposure, compare posture drift, and move from scan initiation to remediation with a dark, analytics-first operations view.</p>
+          <h1>Intelligent Web Application Vulnerability Detection & Analysis Platform</h1>
+          <p className="hero-copy">Initiate intelligent background scanning with flexible authentication support, enabling continuous discovery of vulnerabilities across the application. Monitor the evolving threat surface in real time with dynamic analysis and insights.</p>
         </div>
         <div className="hero-panel">
           <div className="metric"><span>Average Score</span><strong>{averageScore}</strong></div>
