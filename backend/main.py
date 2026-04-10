@@ -137,7 +137,11 @@ async def list_auth_profiles(
 # ---------------- SCAN ROUTES ---------------- #
 
 @app.post(
-    "/scan",
+    "if not str(payload.target_url).startswith(("http://", "https://")):
+    raise HTTPException(
+        status_code=400,
+        detail="Invalid URL format. Include http:// or https://"
+    )",
     response_model=ScanResponse,
     status_code=status.HTTP_202_ACCEPTED
 )
